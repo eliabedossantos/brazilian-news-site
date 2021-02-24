@@ -1,12 +1,13 @@
 
+
 /*###### General formatting ######*/
 * {
 	margin: 0;
 	padding: 0;
 }
 body {
-	font-family: "Trebuchet MS", Helvetica. sans-serif;
-	background: #fff url(../imagens/fundo.png) repeat-x top left;
+	font-family: "Trebuchet MS", Helvetica sans-serif;
+	background: #fff url(../images/fundo.png) repeat-x top left;
 }
 a {
 	text-decoration: none;
@@ -20,13 +21,13 @@ a {
 /*###### Header ######*/
 #topo{
 	height: 150px;
-	background: url(../imagens/detalhe-topo.png) no-repeat right top;
+	background: url(../images/detalhe-topo.png) no-repeat right top;
 	padding-top: 25px;
 }
 .logo{
 	width: 152px;
 	height: 66px;
-	background: url(../imagens/logo.png) no-repeat center;
+	background: url(../images/logo.png) no-repeat center;
 	text-indent: -3000px; /*used to "hide" the h1 header text*/
 }
 /*###### Header menu ######*/
@@ -49,13 +50,15 @@ ul {
 	padding: 0.5em 1.5em;
 	line-height: 2.1em;
 	color: #fff;
-	background: url(../imagens/divisor.png) no-repeat left center;
+	opacity: 1;
+	background: url(../images/divisor.png) no-repeat left center;
 }
 #topo ul .primeiro a {
 	background: none;
 }
 #topo ul a:hover{
-	color: #96001d;
+	opacity: 0.5;
+	transition: all .3s;
 }
 body.home #navegacao a#home,
 body.brasil #navegacao a#brasil,
@@ -67,6 +70,7 @@ body.esporte #navegacao a#esporte /*used to "mark" the user's current page in th
 {
 	color: #fff;
 	background: #de003e;
+	opacity: 1;
 	cursor: text;
 }
 
@@ -105,7 +109,7 @@ body.esporte #navegacao a#esporte /*used to "mark" the user's current page in th
 .caixa {
 	margin: 10px 0;
 	padding: 5px;
-	background: #f2f5f9 url(../imagens/fundo-caixa.png);
+	background: #f2f5f9 url(../images/fundo-caixa.png);
 }
 h2 {
 	font-size: 1.1em;
@@ -141,9 +145,10 @@ h3 {
 	border-bottom: 1px solid #f3f3f3;
 }
 #lateral ul a:hover {
-	background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center;
+	background: #f9f9f9 url(../images/marcador.png) no-repeat left center;
 	padding-left: 20px;
 	color: #a1a1a1;
+	transition: all .3s;
 }
 
 /*###### Forms ######*/
@@ -168,11 +173,16 @@ input[type="submit"] {
 	background-color: #b10333;
 	border: 2px solid #870529;
 }
+input[type="submit"]:hover {
+	cursor: pointer;
+	opacity: 0.9;
+	transition: all .3s;
+}
 /*###### Images ######*/
 img.imagem-principal {
 	width: 98%;
 	margin-top: 5px;
-	border: 3px solid #dfdfdf;
+	border: 3px solid #dfdfdf; 
 }
 /*###### Featured news list ######*/
 .lista-destaque li {
@@ -190,12 +200,12 @@ img.imagem-principal {
 	color: #3e7ab9;
 }
 .lista-destaque li a p {
-	font-size: 0.7em
+	font-size: 0.7em;
 }
 .lista-destaque li:hover {
 	background-color: #eee;
-	height: 65px;
-	cursor: pointer;
+	transition: all .3s;
+
 }
 #conteudo .lista-destaque a:link, #conteudo .lista-destaque a:visited{
 	color: #000;
@@ -237,6 +247,60 @@ img.imagem-principal {
 .leia-mais h3{
 	font-size: 1.2em;
 }
+
+/*###### Editoriais ######*/
+#info-editoriais{
+	padding: 3px;
+}
+#info-editoriais h1 {
+	text-transform: uppercase;
+	font-size: 2.5em;
+	font-weight: 100;
+	font-family: "Arial", "Verdana", Helvetica, sans-serif;
+}
+#sobre-jornalista p {
+	font-size: 0.9em;
+	margin-bottom: 20px;
+}
+#sobre-jornalista hr {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+
+.lista-editoriais li {
+	padding: 2px;
+	border-bottom: 1px solid #ccc;
+	height: 200px;
+}
+.lista-editoriais li a img {
+	float: left;
+	margin: 5px;
+	width: 280px;
+}
+.lista-editoriais li a h3 {
+	font-size: 1.8em;
+	color: #000;
+	font-family: "Arial", "Verdana", Helvetica, sans-serif;
+}
+.lista-editoriais li a p {
+	font-size: 1em;
+	color: #6E6E6E;
+}
+.lista-editoriais li:hover {
+	background-color: #eee;
+	transition: all .3s;
+
+}
+#conteudo .lista-destaque a:link, #conteudo .lista-destaque a:visited{
+	color: #000;
+}
+
+
+
+
+
 
 /*###### Footer ######*/
 #container-rodape {
